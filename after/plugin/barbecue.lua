@@ -91,7 +91,11 @@ require("barbecue").setup({
     ---Theme to be used for generating highlight groups dynamically.
     ---
     ---@type barbecue.Config.theme
-    theme = "auto",
+    --theme = "auto",
+
+    theme = {
+        basename = { bold = false},
+    },
 
     ---Whether context text should follow its icon's color.
     ---
