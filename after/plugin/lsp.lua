@@ -1,3 +1,4 @@
+-- language server manager (via Mason)
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)

@@ -1,3 +1,4 @@
+-- pretty location at the top
 require("barbecue").setup({
     ---Whether to attach navic to language servers automatically.
     ---

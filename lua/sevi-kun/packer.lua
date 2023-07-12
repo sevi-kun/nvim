@@ -8,37 +8,44 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
 
-
     -- treesitter
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use('nvim-treesitter/playground')
-    use('nvim-treesitter/nvim-treesitter-context')
+    use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use ('nvim-treesitter/playground')
+    use ('nvim-treesitter/nvim-treesitter-context')
+
 
     -- useful
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use('ThePrimeagen/harpoon')
-    use('mbbill/undotree')
-    use('m4xshen/autoclose.nvim')
+
+    use {
+        'ThePrimeagen/harpoon',
+        requires = 'nvim-lua/plenary.nvim'
+    }
+
     use {
         'NeogitOrg/neogit',
         requires = 'nvim-lua/plenary.nvim'
     }
 
+    use ('mbbill/undotree')
+
+    use ('m4xshen/autoclose.nvim')
+
+
     -- pretty
-    use({
+    use {
         'catppuccin/nvim',
         as = 'mocha',
         config = function()
             vim.cmd('colorscheme catppuccin-mocha')
         end
-    })
+    }
 
-    use({
-        "utilyre/barbecue.nvim",
-        tag = "*",
+    use {
+        "utilyre/barbecue.nvim", tag = "*",
         requires = {
             "SmiteshP/nvim-navic",
             "nvim-tree/nvim-web-devicons", -- optional dependency
@@ -47,10 +54,11 @@ return require('packer').startup(function(use)
         config = function()
             require("barbecue").setup()
         end,
-    })
+    }
+
 
     -- lsp
-    use ({
+    use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
@@ -69,5 +77,5 @@ return require('packer').startup(function(use)
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
         {'L3MON4D3/LuaSnip'},     -- Required
         }
-    })
+    }
 end)
