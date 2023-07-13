@@ -32,7 +32,12 @@ return require('packer').startup(function(use)
 
     use ('mbbill/undotree')
 
-    use ('m4xshen/autoclose.nvim')
+    use {
+        'm4xshen/autoclose.nvim',
+        config = function ()
+            require("autoclose").setup()
+        end
+    }
 
 
     -- pretty
