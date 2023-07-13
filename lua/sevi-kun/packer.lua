@@ -30,6 +30,21 @@ return require('packer').startup(function(use)
         requires = 'nvim-lua/plenary.nvim'
     }
 
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup()
+        end
+    })
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
     use ('mbbill/undotree')
 
     use {
