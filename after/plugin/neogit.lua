@@ -43,4 +43,4 @@ neogit.setup {
     popup = {
         kind = "split",
     },
-        }
+}
