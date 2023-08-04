@@ -57,10 +57,10 @@ return require('packer').startup(function(use)
 
     -- pretty
     use {
-        'catppuccin/nvim',
-        as = 'mocha',
+        "loctvl842/monokai-pro.nvim",
         config = function()
-            vim.cmd('colorscheme catppuccin-mocha')
+            require("monokai-pro").setup()
+            vim.cmd([[colorscheme monokai-pro]])
         end
     }
 
