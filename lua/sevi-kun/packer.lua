@@ -94,9 +94,10 @@ return require('packer').startup(function(use)
 
     -- pretty
     use {
-        'navarasu/onedark.nvim',
+        "loctvl842/monokai-pro.nvim",
         config = function()
-            vim.cmd('colorscheme onedark')
+            require("monokai-pro").setup()
+            vim.cmd([[colorscheme monokai-pro]])
         end
     }
 
