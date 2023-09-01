@@ -57,10 +57,9 @@ return require('packer').startup(function(use)
 
     -- pretty
     use {
-        'catppuccin/nvim',
-        as = 'mocha',
+        'navarasu/onedark.nvim',
         config = function()
-            vim.cmd('colorscheme catppuccin-mocha')
+            vim.cmd('colorscheme onedark')
         end
     }
 
