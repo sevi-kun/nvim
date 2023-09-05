@@ -116,6 +116,8 @@ return require('packer').startup(function(use)
 
 
     -- lsp
+    use ('github/copilot.vim')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
