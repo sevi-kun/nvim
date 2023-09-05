@@ -37,6 +37,8 @@ return require('packer').startup(function(use)
         requires = 'nvim-lua/plenary.nvim'
     }
 
+    use { 'stevearc/oil.nvim' }
+
     use {
         "nvim-neorg/neorg",
         tag = "*",
