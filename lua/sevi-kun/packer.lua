@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
                     ["core.dirman"] = {
                         config = {
                             workspaces = {
-                                notes = "~/Documents/Notes",
+                                notes = os.getenv("LOCALAPPDATA") .. "\\nvim-data\\Notes",
                             },
                             default_workspace = "notes",
                         },
