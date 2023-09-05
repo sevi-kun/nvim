@@ -15,7 +15,7 @@ local config = {
       ["`"] = { escape = true, close = true, pair = "``", disabled_filetypes = {} },
    },
    options = {
-      disabled_filetypes = { "text", "markdown" },
+      disabled_filetypes = { "text", "markdown", "norg" },
       disable_when_touch = false,
       pair_spaces = false,
       auto_indent = true,
