@@ -30,6 +30,34 @@ return require('packer').startup(function(use)
         requires = 'nvim-lua/plenary.nvim'
     }
 
+    use {
+        "nvim-neorg/neorg",
+        tag = "*",
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+        config = function ()
+            require('neorg').setup {
+                load = {
+                    ["core.defaults"] = {},
+                    ["core.concealer"] = {},
+                    ["core.summary"] = {},
+                    ["core.export"] = {},
+                    ["core.export.markdown"] = {},
+                    ["core.ui"] = {},
+                    ["core.ui.calendar"] = {},
+                    ["core.dirman"] = {
+                        config = {
+                            workspaces = {
+                                notes = "~/Documents/Notes",
+                            },
+                            default_workspace = "notes",
+                        },
+                    },
+                },
+            }
+        end
+    }
+
     use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
