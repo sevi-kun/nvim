@@ -15,6 +15,13 @@ return require('packer').startup(function(use)
 
 
     -- useful
+    use { 'rmagatti/auto-session' }
+
+    use {
+        'rmagatti/session-lens',
+        requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+    }
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         requires = 'nvim-lua/plenary.nvim'
