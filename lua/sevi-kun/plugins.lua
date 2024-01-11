@@ -22,7 +22,7 @@ return {
     },
 
     { "ThePrimeagen/harpoon",
-    	version = "harpoon2",
+    	branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
