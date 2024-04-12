@@ -17,29 +17,42 @@ return {
         }
     },
 
-    { "nvim-telescope/telescope.nvim", version = "0.1.x",
+    { "nvim-telescope/telescope.nvim", 
+        version = "0.1.x",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
 
     { "ThePrimeagen/harpoon",
     	branch = "harpoon2",
-        dependencies = { "nvim-lua/plenary.nvim" },
+        dependencies = { 
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        },
     },
 
     { "NeogitOrg/neogit",
-        dependencies = { "nvim-lua/plenary.nvim" }
+        branch = "nightly",
+        dependencies = { 
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",        -- optional - Diff integration
+            "nvim-telescope/telescope.nvim", -- optional
+        }
     },
 
-    { "stevearc/oil.nvim" },
+    { "stevearc/oil.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
 
     { "kylechui/nvim-surround",
         version = "*",
+        event = "VeryLazy",
         config = function()
             require("nvim-surround").setup()
         end
     },
 
     { "numToStr/Comment.nvim",
+        lazy = false,
         config = function()
             require("Comment").setup()
         end
