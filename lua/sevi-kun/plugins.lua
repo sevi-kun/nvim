@@ -17,17 +17,22 @@ return {
         }
     },
 
-    { "nvim-telescope/telescope.nvim", version = "0.1.x",
+    { "nvim-telescope/telescope.nvim", branch = "0.1.x",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
 
     { "ThePrimeagen/harpoon",
-    	version = "harpoon2",
+    	branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
     { "NeogitOrg/neogit",
-        dependencies = { "nvim-lua/plenary.nvim" }
+        branch = "nightly",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
+            "nvim-telescope/telescope.nvim",
+        }
     },
 
     { "stevearc/oil.nvim" },
