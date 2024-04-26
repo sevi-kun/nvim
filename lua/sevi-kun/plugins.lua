@@ -17,7 +17,8 @@ return {
         }
     },
 
-    { "nvim-telescope/telescope.nvim", branch = "0.1.x",
+    { "nvim-telescope/telescope.nvim",
+        version = "0.1.x",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
 
@@ -35,16 +36,20 @@ return {
         }
     },
 
-    { "stevearc/oil.nvim" },
+    { "stevearc/oil.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
 
     { "kylechui/nvim-surround",
         version = "*",
+        event = "VeryLazy",
         config = function()
             require("nvim-surround").setup()
         end
     },
 
     { "numToStr/Comment.nvim",
+        lazy = false,
         config = function()
             require("Comment").setup()
         end
@@ -91,7 +96,10 @@ return {
 
     -- lsp
 
-    { "github/copilot.vim" },
+    {
+        'Exafunction/codeium.vim',
+        event = 'BufEnter'
+    },
 
     {"williamboman/mason.nvim",
         lazy = false,
