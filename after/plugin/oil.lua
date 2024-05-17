@@ -1,4 +1,4 @@
-require('oil').setup({
+require("oil").setup({
     default_file_explorer = false,
 
     columns = {
@@ -10,8 +10,8 @@ require('oil').setup({
 
     float = {
         -- Padding around the floating window
-        padding = 8,
-        max_width = 80,
+        padding = 12,
+        max_width = 120,
         max_height = 64,
         border = "rounded",
         win_options = {
@@ -22,23 +22,7 @@ require('oil').setup({
         override = function(conf)
             return conf
         end,
-    },
-
-    keymaps = {
-        ["g?"] = "actions.show_help",
-        ["<CR>"] = "actions.select",
-        ["<C-s>"] = "actions.select_vsplit",
-        ["<C-h>"] = "actions.select_split",
-        ["<C-t>"] = "actions.select_tab",
-        ["<C-p>"] = "actions.preview",
-        ["<Esc>"] = "actions.close",
-        ["<C-r>"] = "actions.refresh",
-        ["-"] = "actions.parent",
-        ["_"] = "actions.open_cwd",
-        ["`"] = "actions.cd",
-        ["~"] = "actions.tcd",
-        ["g."] = "actions.toggle_hidden",
-    },
+    }
 })
 
-vim.keymap.set('n', '<leader>-', ":Oil --float <CR>")
+vim.keymap.set("n", "<leader>-", ":Oil --float <CR>")

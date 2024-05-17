@@ -19,7 +19,7 @@ require("barbecue").setup({
     ---modified.
     ---
     ---@type boolean
-    show_modified = false,
+    show_modified = true,
 
     ---Get modified status of file.
     ---

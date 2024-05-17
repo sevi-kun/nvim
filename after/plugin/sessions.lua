@@ -3,11 +3,11 @@ require("auto-session").setup {
     auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
 }
 
-require('session-lens').setup({
-    path_display = {'shorten'},
+require("session-lens").setup({
+    path_display = {"shorten"},
     theme_conf = { border = true },
     previewer = false,
 })
 
 
-vim.keymap.set('n', '<leader>ss', ":SearchSession<CR>")
+vim.keymap.set("n", "<leader>ss", ":SearchSession<CR>")

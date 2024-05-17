@@ -10,6 +10,9 @@ return {
 
 
     -- useful
+
+    { dir = "/mnt/nas_belar/code/vim-plugins/narrator.nvim" },
+
     { "rmagatti/session-lens",
         dependencies = {
             "rmagatti/auto-session",
@@ -23,7 +26,7 @@ return {
     },
 
     { "ThePrimeagen/harpoon",
-    	branch = "harpoon2",
+        branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
@@ -48,20 +51,9 @@ return {
         end
     },
 
-    { "numToStr/Comment.nvim",
-        lazy = false,
-        config = function()
-            require("Comment").setup()
-        end
-    },
-
     { "mbbill/undotree" },
 
-    { "m4xshen/autoclose.nvim",
-        config = function ()
-            require("autoclose").setup()
-        end
-    },
+    { "m4xshen/autoclose.nvim" },
 
 
     -- pretty
@@ -94,23 +86,78 @@ return {
     },
 
 
+    -- mini
+
+    { "echasnovski/mini.basics",
+        version = false,
+        config = function()
+            require("mini.basics").setup()
+        end
+    },
+
+    { "echasnovski/mini.ai",
+        version = false,
+        config = function()
+            require("mini.ai").setup()
+        end
+    },
+
+    { "echasnovski/mini.comment",
+        version = false,
+        config = function()
+            require("mini.comment").setup()
+        end
+    },
+
+    { "echasnovski/mini.map",
+        version = false,
+    },
+
+    { "echasnovski/mini.statusline",
+        version = false,
+        config = function()
+            require("mini.statusline").setup()
+        end
+    },
+
+    { "echasnovski/mini.animate",
+        version = false,
+        config = function()
+            require("mini.animate").setup()
+        end
+    },
+
+    { "echasnovski/mini.fuzzy",
+        version = false,
+        config = function()
+            require("mini.fuzzy").setup()
+        end
+    },
+
+    { "echasnovski/mini.splitjoin",
+        version = false,
+        config = function()
+            require("mini.splitjoin").setup()
+        end
+    },
+
+
     -- lsp
 
-    {
-        "Exafunction/codeium.vim",
+    { "Exafunction/codeium.vim",
         event = "BufEnter"
     },
 
-    {"williamboman/mason.nvim",
+    { "williamboman/mason.nvim",
         config = function()
             require("mason").setup({})
         end
     },
-    {"williamboman/mason-lspconfig.nvim"},
+    { "williamboman/mason-lspconfig.nvim" },
 
-    {"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
-    {"neovim/nvim-lspconfig"},
-    {"hrsh7th/cmp-nvim-lsp"},
-    {"hrsh7th/nvim-cmp"},
-    {"L3MON4D3/LuaSnip"},
+    { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
+    { "neovim/nvim-lspconfig" },
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/nvim-cmp" },
+    { "L3MON4D3/LuaSnip" },
 }

@@ -1,23 +1,12 @@
--- Close brackets
-local config = {
-   keys = {
-      ["("] = { escape = false, close = true, pair = "()", disabled_filetypes = {} },
-      ["["] = { escape = false, close = true, pair = "[]", disabled_filetypes = {} },
-      ["{"] = { escape = false, close = true, pair = "{}", disabled_filetypes = {} },
+local autoclose = require("autoclose")
 
-      [">"] = { escape = true, close = false, pair = "<>", disabled_filetypes = {} },
-      [")"] = { escape = true, close = false, pair = "()", disabled_filetypes = {} },
-      ["]"] = { escape = true, close = false, pair = "[]", disabled_filetypes = {} },
-      ["}"] = { escape = true, close = false, pair = "{}", disabled_filetypes = {} },
+autoclose.setup({
+    options = {
+        disabled_filetypes = { "text", "markdown", "neogit", },
+        disable_when_touch = true,
+        pair_spaces = true,
+        auto_indent = true,
+        disable_command_mode = true,
+    },
+})
 
-      ['"'] = { escape = true, close = true, pair = '""', disabled_filetypes = {} },
-      ["'"] = { escape = true, close = true, pair = "''", disabled_filetypes = {} },
-      ["`"] = { escape = true, close = true, pair = "``", disabled_filetypes = {} },
-   },
-   options = {
-      disabled_filetypes = { "text", "markdown", "norg" },
-      disable_when_touch = false,
-      pair_spaces = false,
-      auto_indent = true,
-   },
-}

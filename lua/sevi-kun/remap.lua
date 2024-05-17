@@ -5,8 +5,6 @@ vim.keymap.set("n", "<leader>.", vim.cmd.Ex)
 
 vim.keymap.set("n", "<C-b>", ":e #<CR>")
 
-vim.keymap.set("n", "<C-b>w", ":wq<CR>")
-
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -22,3 +20,5 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 vim.keymap.set("n", "<F5>", ":make")
+
+vim.keymap.set("n", "<leader>l", ":noh<CR>")
