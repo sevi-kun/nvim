@@ -1,7 +1,7 @@
 -- Configuration of mini.nvim plugins
 
--- mini.map
 
+-- mini.map
 local map = require("mini.map")
 map.setup({
     symbols = {
@@ -22,7 +22,12 @@ map.setup({
     },
 })
 
+vim.keymap.set("n", "<Leader>mf", map.toggle_focus)
+vim.keymap.set("n", "<Leader>mr", map.refresh)
+vim.keymap.set("n", "<Leader>mt", map.toggle)
 
+
+-- mini.animate
 local animate = require("mini.animate")
 animate.setup({
     cursor = {
@@ -42,13 +47,3 @@ animate.setup({
     },
 })
 
-
-
-
-
-vim.keymap.set("n", "<Leader>mc", map.close)
-vim.keymap.set("n", "<Leader>mf", map.toggle_focus)
-vim.keymap.set("n", "<Leader>mo", map.open)
-vim.keymap.set("n", "<Leader>mr", map.refresh)
-vim.keymap.set("n", "<Leader>ms", map.toggle_side)
-vim.keymap.set("n", "<Leader>mt", map.toggle)
