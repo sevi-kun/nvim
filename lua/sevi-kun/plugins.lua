@@ -97,12 +97,11 @@ return {
     -- lsp
 
     {
-        'Exafunction/codeium.vim',
-        event = 'BufEnter'
+        "Exafunction/codeium.vim",
+        event = "BufEnter"
     },
 
     {"williamboman/mason.nvim",
-        lazy = false,
         config = function()
             require("mason").setup({})
         end
